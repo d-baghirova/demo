@@ -1,0 +1,120 @@
+html, body{
+  padding:0px;
+  margin:0px;
+  width:100vw;
+}
+body * {
+  margin:0;
+  padding:0;
+}
+
+#root {
+ padding:0px;
+  margin:0px;
+  width:100vw;
+}
+
+
+/* HTML Nav Styles */
+/* HTML Nav Styles */
+/* HTML Nav Styles */
+nav li { 
+  position:relative;
+  display:block;
+  opacity:0;
+  cursor:pointer;
+}
+
+nav li > menu {
+  position: absolute;
+  pointer-events:none;
+}
+nav > menu { display:flex; }
+
+nav > menu > li { pointer-events: all; opacity:1; }
+menu li a { white-space:nowrap; display:block; }
+  
+li:hover > menu {
+  pointer-events:initial;
+}
+li:hover > menu > li,
+menu:hover > li{
+  opacity:1;
+}
+nav > menu > li li menu {
+  transform:translateX(100%);
+  top:0; right:0;
+}
+/* User Styles Below Not Required */
+/* User Styles Below Not Required */
+/* User Styles Below Not Required */
+
+nav { 
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+nav a {
+  background:#EFEFEF;
+  color:#326b6a;
+  min-width:190px;
+  transition: background 0.5s, color 0.5s, transform 0.5s;
+  padding:20px 40px;
+  box-sizing:border-box;
+  position:relative;
+  padding: 8px 16px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+span.white {
+  color: white;
+}
+
+#drop {
+  padding: 8px 16px;
+border: 1px solid #3d8584;
+color: #3d8584;
+border-radius: 20px;
+background-image: linear-gradient(to right, white calc(100% - 40px), #66d3d1 40px);
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-align: left;
+z-index: 1;
+margin:0px 6px 6px 0px;
+}
+
+nav a:hover:before {
+  content: '';
+  top:0;left:0;
+  position:absolute;
+  background:rgba(0, 0, 0, 0.2);
+  width:100%;
+  height:100%;
+}
+
+#drop:hover:before {
+ border-radius: 20px;
+}
+
+nav > menu > li > menu > li{
+  transition: transform 0.6s, opacity 0.6s;
+  transform:translateY(150%);
+  opacity:0;
+}
+nav > menu > li:hover > menu > li,
+nav > menu > li.hover > menu > li{
+  transform:translateY(0%);
+  opacity: 1;
+}
+
+li > menu > li > menu > li{
+  transition: transform 0.6s, opacity 0.6s;
+  transform:translateX(195px) translateY(0%);
+  opacity: 0;
+} 
+li > menu > li:hover > menu > li,  
+li > menu > li.hover > menu > li{  
+  transform:translateX(0) translateY(0%);
+  opacity: 1;
+}
